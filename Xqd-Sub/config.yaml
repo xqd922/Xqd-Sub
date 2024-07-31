@@ -1,0 +1,508 @@
+# 本地 HTTP 代理端口
+port: 7890
+
+# 本地 SOCKS5 代理端口
+socks-port: 7891
+
+# 本地透明代理端口
+redir-port: 7892
+
+# 是否允许局域网设备连接
+allow-lan: false
+
+# 代理模式，可以是 Rule（规则）、Global（全局）或 Direct（直连）
+mode: rule
+
+# 日志级别，可以是 debug、info、warning 或 error
+log-level: info
+
+# 外部控制端口，用于 Clash Dashboard 等工具
+external-controller: 127.0.0.1:9090
+
+# DNS 配置
+dns:
+  enable: true       # 启用 DNS 解析
+  ipv6: false        # 禁用 IPv6
+  listen: 0.0.0.0:53 # 监听端口
+  enhanced-mode: fake-ip # 增强模式，使用假 IP
+  nameserver:        # DNS 服务器列表
+    - 114.114.114.114
+    - 8.8.8.8
+
+# 从 URL 获取代理配置
+proxy-providers:
+  my-provider:
+    type: http
+    url: ""
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+    override:
+      additional-prefix: "[FAC]" 
+
+  example-provider:
+    type: http
+    url: ""
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+    override:
+      additional-prefix: "[ACA]"
+
+# 代理组配置
+proxy-groups:
+  - name: "🪜Proxy"
+    type: select
+    use:
+      - my-provider
+      - example-provider
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/ArcticonsLastLauncher.svg"
+    proxies:
+      - ♻️Auto
+      - 🔯Fallback
+      - 🔮LoadBanlance
+      - DIRECT
+      - 🇭🇰 HK ⚡
+      - 🇨🇳 TW ⚡
+      - 🇯🇵 JP ⚡
+      - 🇸🇬 SG ⚡
+      - 🇺🇸 US ⚡
+      - 📉Low Rate
+
+  - name: "♻️Auto"
+    type: url-test
+    use:
+      - my-provider
+      - example-provider
+    filter: '^(?!.*(冷门|家宽|Emby专用|剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/MaterialSymbolsLightCycle.svg"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: "🔯Fallback"
+    type: fallback
+    use:
+      - my-provider
+      - example-provider
+    filter: '^(?!.*(冷门|家宽|Emby专用|剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/HugeiconsArrowDataTransferHorizontal.svg"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: "🔮LoadBanlance"
+    type: load-balance
+    use:
+      - my-provider
+      - example-provider
+    filter: '^(?!.*(冷门|家宽|Emby专用|剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/FluentAlignSpaceEvenlyHorizontal20Regular.svg"
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+  - name: "📺Emby"
+    type: select
+    use:
+      - my-provider
+      - example-provider
+    filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/ArcticonsEmby.svg"
+    proxies:
+      - 🪜Proxy
+      - DIRECT
+      - 🇭🇰 HK ⚡
+      - 🇨🇳 TW ⚡
+      - 🇯🇵 JP ⚡
+      - 🇸🇬 SG ⚡
+      - 🇺🇸 US ⚡
+      - 📉Low Rate
+
+  - name: "🎬Streaming"
+    type: select
+    use:
+      - my-provider
+      - example-provider
+    filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/IconoirChromecast.svg"
+    proxies:
+      - 🪜Proxy
+      - DIRECT
+      - 🇭🇰 HK ⚡
+      - 🇨🇳 TW ⚡
+      - 🇯🇵 JP ⚡
+      - 🇸🇬 SG ⚡
+      - 🇺🇸 US ⚡
+      - 📉Low Rate
+
+  - name: "❔OpenAI"
+    type: select
+    use:
+      - my-provider
+      - example-provider
+    filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/ArcticonsOpenaiChatgpt.svg"
+    proxies:
+      - 🪜Proxy
+      - DIRECT
+      - 🇭🇰 HK ⚡
+      - 🇨🇳 TW ⚡
+      - 🇯🇵 JP ⚡
+      - 🇸🇬 SG ⚡
+      - 🇺🇸 US ⚡
+      - 📉Low Rate
+
+  - name: "💭Telegram"
+    type: select
+    use:
+      - my-provider
+      - example-provider
+    filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/UitTelegramAlt.svg"
+    proxies:
+      - 🪜Proxy
+      - DIRECT
+      - 🇭🇰 HK ⚡
+      - 🇨🇳 TW ⚡
+      - 🇯🇵 JP ⚡
+      - 🇸🇬 SG ⚡
+      - 🇺🇸 US ⚡
+      - 📉Low Rate
+
+  - name: "🎵Spotify"
+    type: select
+    use:
+      - my-provider
+      - example-provider
+    filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/ArcticonsSpotify.svg"
+    proxies:
+      - 🪜Proxy
+      - DIRECT
+      - 🇭🇰 HK ⚡
+      - 🇨🇳 TW ⚡
+      - 🇯🇵 JP ⚡
+      - 🇸🇬 SG ⚡
+      - 🇺🇸 US ⚡
+      - 📉Low Rate
+
+  - name: "🎶TikTok"
+    type: select
+    use:
+      - my-provider
+      - example-provider
+    filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/ArcticonsTiktok.svg"
+    proxies:
+      - 🪜Proxy
+      - DIRECT
+      - 🇭🇰 HK ⚡
+      - 🇨🇳 TW ⚡
+      - 🇯🇵 JP ⚡
+      - 🇸🇬 SG ⚡
+      - 🇺🇸 US ⚡
+      - 📉Low Rate
+
+  - name: "🌐Google"
+    type: select
+    use:
+      - my-provider
+      - example-provider
+    filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/ArcticonsGoogleAlt4.svg"
+    proxies:
+      - 🪜Proxy
+      - DIRECT
+      - 🇭🇰 HK ⚡
+      - 🇨🇳 TW ⚡
+      - 🇯🇵 JP ⚡
+      - 🇸🇬 SG ⚡
+      - 🇺🇸 US ⚡
+      - 📉Low Rate
+
+  - name: "🖥Microsoft"
+    type: select
+    use:
+      - my-provider
+      - example-provider
+    filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/ArcticonsMicrosoft.svg"
+    proxies:
+      - DIRECT
+      - 🪜Proxy
+      - 🇭🇰 HK ⚡
+      - 🇨🇳 TW ⚡
+      - 🇯🇵 JP ⚡
+      - 🇸🇬 SG ⚡
+      - 🇺🇸 US ⚡
+      - 📉Low Rate
+
+  - name: "🍎Apple"
+    type: select
+    use:
+      - my-provider
+      - example-provider
+    filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/UitAppleAlt.svg"
+    proxies:
+      - DIRECT
+      - 🪜Proxy
+      - 🇭🇰 HK ⚡
+      - 🇨🇳 TW ⚡
+      - 🇯🇵 JP ⚡
+      - 🇸🇬 SG ⚡
+      - 🇺🇸 US ⚡
+      - 📉Low Rate
+
+  - name: "📉Low Rate"
+    type: url-test
+    use:
+      - my-provider
+      - example-provider
+    filter: ".*(0.3|0.01).*"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/MarketeqDownTrend.svg"
+
+  - name: "Final"
+    type: select
+    use:
+      - my-provider
+      - example-provider
+    filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/MarketeqDoneCollection.svg"
+    proxies:
+      - 🪜Proxy
+      - DIRECT
+      - 🇭🇰 HK ⚡
+      - 🇨🇳 TW ⚡
+      - 🇯🇵 JP ⚡
+      - 🇸🇬 SG ⚡
+      - 🇺🇸 US ⚡
+      - 📉Low Rate
+
+  - name: "🇭🇰 HK ⚡"
+    type: url-test
+    use:
+      - my-provider
+      - example-provider
+    filter: ".*(港|hk|hongkong|hong kong|HK|🇭🇰)(?!.*家宽).*"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/FlagHk4x3.svg"
+    
+  - name: "🇨🇳 TW ⚡"
+    type: url-test
+    use:
+      - my-provider
+      - example-provider
+    filter: ".*(台湾|Tai|Taiwan|TW|🇨🇳)(?!.*家宽).*"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/FlagCn4x3.svg"
+
+  - name: "🇯🇵 JP ⚡"
+    type: url-test
+    use:
+      - my-provider
+      - example-provider
+    filter: ".*(日|东京|大阪|埼玉|JP|Japan)(?!.*家宽).*"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/FlagJp4x3.svg"
+
+  - name: "🇸🇬 SG ⚡"
+    type: url-test
+    use:
+      - my-provider
+      - example-provider
+    filter: ".*(新|狮城|SG|Singapore)(?!.*家宽).*"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/FlagSg4x3.svg"
+
+  - name: "🇺🇸 US ⚡"
+    type: url-test
+    use:
+      - my-provider
+      - example-provider
+    filter: ".*(美|US|America|United States)(?!.*(家宽|Emby)).*"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/FlagUs4x3.svg"
+
+# 规则提供者
+rule-providers:
+  Direct-Guanwang:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Direct-Guanwang.yaml"
+    path: ./rules/Direct-Guanwang.yaml  
+    interval: 86400
+
+  DIRECT:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/DIRECT.yaml"
+    path: ./rules/DIRECT.yaml  
+    interval: 86400  
+
+  Emby:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Emby.yaml"  
+    path: ./rules/Emby.yaml  
+    interval: 86400  
+
+  OpenAI:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/OpenAI.yaml"  
+    path: ./rules/OpenAI.yaml  
+    interval: 86400  
+
+  Telegram:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Telegram.yaml"  
+    path: ./rules/Telegram.yaml  
+    interval: 86400  
+
+  Streaming:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Netflix.yaml"
+    path: ./rules/Streaming.yaml  
+    interval: 86400  
+
+  Disney:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Disney.yaml"
+    path: ./rules/Streaming.yaml  
+    interval: 86400
+
+  Spotify:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Spotify.yaml"  
+    path: ./rules/Spotify.yaml  
+    interval: 86400  
+
+  TikTok:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/TikTok.yaml"  
+    path: ./rules/TikTok.yaml  
+    interval: 86400  
+
+  Google:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Google.yaml"
+    path: ./rules/Google.yaml  
+    interval: 86400  
+  
+  YouTube:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/YouTube.yaml"
+    path: ./rules/Google.yaml  
+    interval: 86400
+  
+  GoogleFCM:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/GoogleFCM.yaml"
+    path: ./rules/Google.yaml  
+    interval: 86400
+
+  Microsoft:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Microsoft.yaml"
+    path: ./rules/Microsoft.yaml  
+    interval: 86400  
+  
+  OneDrive:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/OneDrive.yaml"
+    path: ./rules/Microsoft.yaml  
+    interval: 86400
+  
+  Apple:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Apple.yaml"  
+    path: ./rules/Apple.yaml  
+    interval: 86400  
+  
+  Final:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Final.yaml"  
+    path: ./rules/Final.yaml  
+    interval: 86400  
+  
+  LocalAreaNetwork:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/LocalAreaNetwork.yaml"  
+    path: ./rules/LocalAreaNetwork.yaml  
+    interval: 86400  
+  
+  UnBan:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/UnBan.yaml"  
+    path: ./rules/UnBan.yaml  
+    interval: 86400  
+  
+  ProxyMedia:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/ProxyMedia.yaml"  
+    path: ./rules/ProxyMedia.yaml  
+    interval: 86400  
+  
+  ChinaDomain:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/ChinaDomain.yaml"  
+    path: ./rules/ChinaDomain.yaml  
+    interval: 86400  
+  
+  ChinaCompanyIp:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/ChinaCompanyIp.yaml"  
+    path: ./rules/ChinaCompanyIp.yaml  
+    interval: 86400  
+   
+  Download:
+    type: http  
+    behavior: classical 
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Download.yaml"  
+    path: ./rules/Download.yaml  
+    interval: 86400  
+
+# 规则配置
+rules:
+  - RULE-SET,Direct-Guanwang,DIRECT
+  - RULE-SET,DIRECT,DIRECT
+  - RULE-SET,LocalAreaNetwork,DIRECT
+  - RULE-SET,Emby,📺Emby
+  - RULE-SET,UnBan,DIRECT
+  - RULE-SET,OpenAI,❔OpenAI
+  - RULE-SET,Streaming,🎬Streaming
+  - RULE-SET,Telegram,💭Telegram
+  - RULE-SET,Spotify,🎵Spotify
+  - RULE-SET,TikTok,🎶TikTok
+  - RULE-SET,Google,🌐Google
+  - RULE-SET,YouTube,🌐Google
+  - RULE-SET,GoogleFCM,🌐Google
+  - RULE-SET,Microsoft,🖥Microsoft
+  - RULE-SET,OneDrive,🖥Microsoft
+  - RULE-SET,Apple,🍎Apple
+  - RULE-SET,ProxyMedia,Final
+  - RULE-SET,ChinaDomain,DIRECT
+  - RULE-SET,ChinaCompanyIp,DIRECT
+  - RULE-SET,Download,DIRECT
+  - RULE-SET,Final,Final
+  
+  # 中国大陆网站直连
+  - GEOIP,CN,DIRECT
+  
+  # 其他流量默认通过代理
+  - MATCH,Final
