@@ -60,7 +60,7 @@ proxy-groups:
     use:
       - my-provider
       - example-provider
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/ArcticonsLastLauncher.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/ArcticonsLastLauncher.svg"
     proxies:
       - ♻️Auto
       - 🔯Fallback
@@ -79,7 +79,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: '^(?!.*(冷门|家宽|Emby专用|剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/MaterialSymbolsLightCycle.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/MaterialSymbolsLightCycle.svg"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
@@ -89,7 +89,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: '^(?!.*(冷门|家宽|Emby专用|剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/HugeiconsArrowDataTransferHorizontal.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/HugeiconsArrowDataTransferHorizontal.svg"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
@@ -99,7 +99,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: '^(?!.*(冷门|家宽|Emby专用|剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/FluentAlignSpaceEvenlyHorizontal20Regular.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/FluentAlignSpaceEvenlyHorizontal20Regular.svg"
     url: http://www.gstatic.com/generate_204
     interval: 300
 
@@ -109,7 +109,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/ArcticonsEmby.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/ArcticonsEmby.svg"
     proxies:
       - 🪜Proxy
       - DIRECT
@@ -126,7 +126,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/IconoirChromecast.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/IconoirChromecast.svg"
     proxies:
       - 🪜Proxy
       - DIRECT
@@ -143,7 +143,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/ArcticonsOpenaiChatgpt.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/ArcticonsOpenaiChatgpt.svg"
     proxies:
       - 🪜Proxy
       - DIRECT
@@ -160,7 +160,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/UitTelegramAlt.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/UitTelegramAlt.svg"
     proxies:
       - 🪜Proxy
       - DIRECT
@@ -177,7 +177,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/ArcticonsSpotify.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/ArcticonsSpotify.svg"
     proxies:
       - 🪜Proxy
       - DIRECT
@@ -194,7 +194,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/ArcticonsTiktok.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/ArcticonsTiktok.svg"
     proxies:
       - 🪜Proxy
       - DIRECT
@@ -211,7 +211,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/ArcticonsGoogleAlt4.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/ArcticonsGoogleAlt4.svg"
     proxies:
       - 🪜Proxy
       - DIRECT
@@ -228,7 +228,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/ArcticonsMicrosoft.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/ArcticonsMicrosoft.svg"
     proxies:
       - DIRECT
       - 🪜Proxy
@@ -245,7 +245,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/UitAppleAlt.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/UitAppleAlt.svg"
     proxies:
       - DIRECT
       - 🪜Proxy
@@ -262,7 +262,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: ".*(0.3|0.01).*"
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/MarketeqDownTrend.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/MarketeqDownTrend.svg"
 
   - name: "Final"
     type: select
@@ -270,7 +270,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: '^(?!.*(剩余流量|下次重置剩余|套餐到期|Traffic|Next|Valid|更新订阅|临时官网)).*$'
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/MarketeqDoneCollection.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/MarketeqDoneCollection.svg"
     proxies:
       - 🪜Proxy
       - DIRECT
@@ -287,7 +287,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: ".*(港|hk|hongkong|hong kong|HK|🇭🇰)(?!.*家宽).*"
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/FlagHk4x3.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/FlagHk4x3.svg"
     
   - name: "🇨🇳 TW ⚡"
     type: url-test
@@ -295,7 +295,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: ".*(台湾|Tai|Taiwan|TW|🇨🇳)(?!.*家宽).*"
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/FlagCn4x3.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/FlagCn4x3.svg"
 
   - name: "🇯🇵 JP ⚡"
     type: url-test
@@ -303,7 +303,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: ".*(日|东京|大阪|埼玉|JP|Japan)(?!.*家宽).*"
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/FlagJp4x3.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/FlagJp4x3.svg"
 
   - name: "🇸🇬 SG ⚡"
     type: url-test
@@ -311,7 +311,7 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: ".*(新|狮城|SG|Singapore)(?!.*家宽).*"
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/FlagSg4x3.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/FlagSg4x3.svg"
 
   - name: "🇺🇸 US ⚡"
     type: url-test
@@ -319,161 +319,161 @@ proxy-groups:
       - my-provider
       - example-provider
     filter: ".*(美|US|America|United States)(?!.*(家宽|Emby)).*"
-    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-icon/FlagUs4x3.svg"
+    icon: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-icon/FlagUs4x3.svg"
 
 # 规则提供者
 rule-providers:
   Direct-Guanwang:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Direct-Guanwang.yaml"
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/Direct-Guanwang.yaml"
     path: ./rules/Direct-Guanwang.yaml  
     interval: 86400
 
   DIRECT:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/DIRECT.yaml"
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/DIRECT.yaml"
     path: ./rules/DIRECT.yaml  
     interval: 86400  
 
   Emby:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Emby.yaml"  
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/Emby.yaml"  
     path: ./rules/Emby.yaml  
     interval: 86400  
 
   OpenAI:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/OpenAI.yaml"  
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/OpenAI.yaml"  
     path: ./rules/OpenAI.yaml  
     interval: 86400  
 
   Telegram:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Telegram.yaml"  
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/Telegram.yaml"  
     path: ./rules/Telegram.yaml  
     interval: 86400  
 
   Streaming:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Netflix.yaml"
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/Netflix.yaml"
     path: ./rules/Streaming.yaml  
     interval: 86400  
 
   Disney:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Disney.yaml"
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/Disney.yaml"
     path: ./rules/Streaming.yaml  
     interval: 86400
 
   Spotify:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Spotify.yaml"  
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/Spotify.yaml"  
     path: ./rules/Spotify.yaml  
     interval: 86400  
 
   TikTok:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/TikTok.yaml"  
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/TikTok.yaml"  
     path: ./rules/TikTok.yaml  
     interval: 86400  
 
   Google:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Google.yaml"
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/Google.yaml"
     path: ./rules/Google.yaml  
     interval: 86400  
   
   YouTube:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/YouTube.yaml"
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/YouTube.yaml"
     path: ./rules/Google.yaml  
     interval: 86400
   
   GoogleFCM:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/GoogleFCM.yaml"
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/GoogleFCM.yaml"
     path: ./rules/Google.yaml  
     interval: 86400
 
   Microsoft:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Microsoft.yaml"
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/Microsoft.yaml"
     path: ./rules/Microsoft.yaml  
     interval: 86400  
   
   OneDrive:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/OneDrive.yaml"
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/OneDrive.yaml"
     path: ./rules/Microsoft.yaml  
     interval: 86400
   
   Apple:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Apple.yaml"  
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/Apple.yaml"  
     path: ./rules/Apple.yaml  
     interval: 86400  
   
   Final:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Final.yaml"  
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/Final.yaml"  
     path: ./rules/Final.yaml  
     interval: 86400  
   
   LocalAreaNetwork:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/LocalAreaNetwork.yaml"  
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/LocalAreaNetwork.yaml"  
     path: ./rules/LocalAreaNetwork.yaml  
     interval: 86400  
   
   UnBan:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/UnBan.yaml"  
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/UnBan.yaml"  
     path: ./rules/UnBan.yaml  
     interval: 86400  
   
   ProxyMedia:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/ProxyMedia.yaml"  
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/ProxyMedia.yaml"  
     path: ./rules/ProxyMedia.yaml  
     interval: 86400  
   
   ChinaDomain:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/ChinaDomain.yaml"  
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/ChinaDomain.yaml"  
     path: ./rules/ChinaDomain.yaml  
     interval: 86400  
   
   ChinaCompanyIp:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/ChinaCompanyIp.yaml"  
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/ChinaCompanyIp.yaml"  
     path: ./rules/ChinaCompanyIp.yaml  
     interval: 86400  
    
   Download:
     type: http  
     behavior: classical 
-    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Sub/Sub-yaml/Download.yaml"  
+    url: "https://raw.githubusercontent.com/xqd922/Xqd-Sub/main/Xqd-Sub/Sub-yaml/Download.yaml"  
     path: ./rules/Download.yaml  
     interval: 86400  
 
