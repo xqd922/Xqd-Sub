@@ -1,2 +1,5 @@
 rules:
-  - DOMAIN-SUFFIX,emby.nexitally.com
+  - DOMAIN,e.niceduck.me
+  - DOMAIN,cf.niceduck.lol
+  - DOMAIN,vi.niceduck.lol
+  - DOMAIN,pilicf.niceduck.lol
