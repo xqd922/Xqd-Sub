@@ -1,3 +1,5 @@
 rules:
   - DOMAIN-SUFFIX,api.acaisbest.shop
   - DOMAIN,my.niceduck.io
+  - DOMAIN,tv.micu.hk
+  - DOMAIN,tv1.micu.hk
