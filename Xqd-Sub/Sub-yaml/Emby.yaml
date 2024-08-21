@@ -170,3 +170,5 @@ rules:
   - DOMAIN,pilicf.niceduck.lol
   - DOMAIN,sg.886318.xyz
   - DOMAIN,emby.apopcloud.com
+  - IP-CIDR,202.189.5.63/32
+  - DOMAIN,media.micu.hk
