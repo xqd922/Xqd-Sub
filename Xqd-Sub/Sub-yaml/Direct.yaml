@@ -3,3 +3,4 @@ rules:
   - DOMAIN,my.niceduck.io
   - DOMAIN,tv.micu.hk
   - DOMAIN,tv1.micu.hk
+  - DOMAIN-SUFFIX,wd-gold.com
