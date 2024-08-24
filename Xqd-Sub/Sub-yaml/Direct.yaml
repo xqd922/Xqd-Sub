@@ -4,4 +4,4 @@ rules:
   - DOMAIN,tv.micu.hk
   - DOMAIN,tv1.micu.hk
   - DOMAIN-SUFFIX,wd-gold.com
-  - DOMAIN-SUFFIX,wd-gold.net
+  - DOMAIN-SUFFIX,wd-cloud.net
