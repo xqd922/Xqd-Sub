@@ -175,3 +175,4 @@ rules:
   - DOMAIN-SUFFIX,mooguu.top
   - DOMAIN-SUFFIX,lilyya.xyz
   - DOMAIN,tv.811861.xyz
+  - IP-CIDR,207.211.186.139/32
