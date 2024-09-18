@@ -176,4 +176,4 @@ rules:
   - DOMAIN-SUFFIX,lilyya.xyz
   - DOMAIN,tv.811861.xyz
   - IP-CIDR,207.211.186.139/32
-  - DOMAIN,emby3.029902.xyz
+ - DOMAIN-SUFFIX,029902.xyz
